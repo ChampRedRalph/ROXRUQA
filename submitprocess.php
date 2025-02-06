@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Execute the query
     if ($conn->query($sql) === TRUE) {
         echo "<script>
-            alert('Your competencies are recorded successfully. Proceed to Competency Entry.');
+            alert('Your answers are recorded successfully. Proceed to Competency Entry.');
             window.location.href = 'index.php';
           </script>";
         exit();
