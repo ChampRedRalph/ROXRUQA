@@ -7,7 +7,7 @@
 include '../adminquarterlyassessment/roxcon.php';
 
 // Fetch school data from the database
-$query = "SELECT schoolid, `name` FROM school";
+$query = "SELECT schoolid, `name` FROM school where quarter = 3";
 $result = $conn->query($query);
 
 
@@ -337,9 +337,9 @@ $selected_grade = isset($_GET['grade']) ? $_GET['grade'] : '';
                         </select>
 
                         <label for="schoolid">School ID:</label>
-                        <input type="number" id="schoolid" name="schoolid" placeholder="128060" maxlength="6" required />
+                        <!--input type="number" id="schoolid" name="schoolid" placeholder="128060" maxlength="6" required /--!>
                         <?php 
-                        /*
+                        
                         if ($result->num_rows > 0) {
     echo '<select name="schoolid" class="form-control" required>';
     echo '<option value="">Select School</option>';
@@ -358,7 +358,7 @@ $selected_grade = isset($_GET['grade']) ? $_GET['grade'] : '';
     echo '<option value="">No schools available</option>';
     echo '</select>';
 }
-*/
+
 ?>
                         <label for="name">Full Name:</label>
                         <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
